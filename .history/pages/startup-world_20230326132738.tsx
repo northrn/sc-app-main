@@ -1,5 +1,4 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
-import image from 'next/image'
 
 const featuredPost = {
     id: 1,
@@ -38,8 +37,6 @@ const featuredPost = {
 export default function StartupWorld() {
   return (
     <div className="px-6 max-w-7xl">
-    {/* Page Nav */}
-
       <div>
         <nav className="sm:hidden" aria-label="Back">
           <a href="#" className="flex items-center text-sm font-medium text-white hover:text-gray-700">
@@ -75,24 +72,19 @@ export default function StartupWorld() {
           </ol>
         </nav>
       </div>
-      <div className="mt-2 md:flex md:items-center md:justify-between">
+        <div className="mt-2 md:flex md:items-center md:justify-between">
             <div className="min-w-0 flex-1">
-            <h2 className="text-2xl pt-2 font-bold font-display leading-7 text-white sm:truncate sm:text-3xl sm:tracking-tight">
+            <h2 className="text-2xl font-bold leading-7 text-white sm:truncate sm:text-3xl sm:tracking-tight">
                 Report #1
             </h2>
             </div>
-      </div>
-
-    {/* Page Content */}
-
-      <div className="my-6 mx-auto grid max-w-2xl grid-cols-1 items-start gap-y-16 gap-x-8 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-        <div className="border-cyan-300 border-4 min-h-max">
-         <img src="https://i.imgur.com/UWlolVD.jpg"/>
         </div>
-        <p className="py-2 font-sans text-white text-justify md: pl-6">Donec sollicitudin nec neque vel suscipit. Donec elit neque, porta sed leo nec, accumsan porta leo. Suspendisse imperdiet erat a ante ornare, quis lacinia eros lobortis. Vivamus dignissim malesuada vulputate. Mauris quis sapien eget lacus venenatis bibendum. Integer nec massa gravida, bibendum enim vitae, commodo elit. Praesent vitae laoreet lacus. Nulla viverra tincidunt ornare. Maecenas nec dolor fringilla neque malesuada mollis a at magna. Cras augue nibh, pharetra ac augue non, interdum tristique nisi. Aliquam tincidunt porttitor euismod. Mauris a blandit metus. Donec mattis facilisis neque at luctus.</p>
-      </div>
+        <div className="my-6 md:flex md:items-center md:justify-between">
+            <div className="border-cyan-300 border-4 min-h-max max-w-md"></div>
+            <p className="py-2 font-sans text-white text-justify md: pl-6">Donec sollicitudin nec neque vel suscipit. Donec elit neque, porta sed leo nec, accumsan porta leo. Suspendisse imperdiet erat a ante ornare, quis lacinia eros lobortis. Vivamus dignissim malesuada vulputate. Mauris quis sapien eget lacus venenatis bibendum. Integer nec massa gravida, bibendum enim vitae, commodo elit. Praesent vitae laoreet lacus. Nulla viverra tincidunt ornare. Maecenas nec dolor fringilla neque malesuada mollis a at magna. Cras augue nibh, pharetra ac augue non, interdum tristique nisi. Aliquam tincidunt porttitor euismod. Mauris a blandit metus. Donec mattis facilisis neque at luctus.</p>
+        </div>
 
-    {/* Article Section */}
+        {/* Article Section */}
 
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 px-6 py-6 sm:gap-y-16 lg:grid-cols-2 lg:px-8">
             <article className="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-lg">
