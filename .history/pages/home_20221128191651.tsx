@@ -1,12 +1,6 @@
 import Link from 'next/link'
-import React from 'react'
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import { DialogPanelProps } from '@headlessui/react/dist/components/dialog/dialog'
-function MyDialog(props: DialogPanelProps<'div'>) {
-  // ...
-}
-
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
@@ -16,31 +10,12 @@ const navigation = [
     { name: 'Company', href: '#' },
   ]  
 
-  interface CustomDialogPanelProps extends React.ComponentProps<typeof Dialog.Panel> {
-    Focus?: boolean;
-  }
-
-  const CustomDialogPanel = React.forwardRef<HTMLDivElement, CustomDialogPanelProps>(
-    ({ Focus, ...props }, ref) => {
-      return (
-        <Dialog.Panel ref={ref} {...props}>
-          <div
-            className={`${props.className} ${Focus ? 'focus:outline-none' : ''}`}
-            tabIndex={Focus ? -1 : undefined}
-          >
-            {props.children}
-          </div>
-        </Dialog.Panel>
-      );
-    }
-  );
-
 export default function Home() {
     
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return(
-      <div className="isolate bg-white">
+        <div className="isolate bg-white">
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         {/* <svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -90,7 +65,7 @@ export default function Home() {
         <div>
           
           <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-            <CustomDialogPanel Focus={true} className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+            <Dialog.Panel Focus="true" className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
               <div className="flex h-9 items-center justify-between">
                 <div className="flex">
                   <a href="#" className="-m-1.5 p-1.5">
@@ -136,7 +111,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </CustomDialogPanel>
+            </Dialog.Panel>
           </Dialog>
         </div>
       </div>
